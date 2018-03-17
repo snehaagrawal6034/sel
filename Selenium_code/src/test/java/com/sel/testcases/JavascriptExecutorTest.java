@@ -44,7 +44,7 @@ public class JavascriptExecutorTest {
 	        String windowheight=js.executeScript("return window.innerHeight").toString();
 	        System.out.println(windowheight);
 	        js.executeScript("window.location = 'http://facebook.com/'");
-	      //  System.out.println(windownav);
+	     
 	        
 	    		
 	    }		

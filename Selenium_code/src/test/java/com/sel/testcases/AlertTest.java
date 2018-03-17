@@ -14,7 +14,7 @@ public class AlertTest {
 					WebDriver driver = new ChromeDriver();
 				
 	// Alert Message handling
-                 System.out.println();   		
+                 
         driver.get("http://demo.guru99.com/test/delete_customer.php");			
                             		
      	      	
