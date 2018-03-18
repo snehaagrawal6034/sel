@@ -33,12 +33,18 @@ public class Locators {
 		// finding element through locator name -- not working
 		// WebElement lname = driver.findElement(By.name("customer_lastname"));
 		// lname.sendKeys("agrawal");
+		
 		// finding element through lintext
-		WebElement link = driver.findElement(By.linkText("Women"));
-		link.click();
+		// WebElement link = driver.findElement(By.linkText("Women"));
+		// link.click();
+		
+		/*
+		 * WebElement fname =
+		 * driver.findElement(By.cssSelector("input[id='customer_firstname']"));
+		 * fname.sendKeys("sneha");
+		 */
 
 		// locating hidden elements
-
 		List<WebElement> dress = driver.findElements(By.cssSelector("a[title='Dresses']"));
 		int count = dress.size();
 		System.out.println(+count);
