@@ -10,9 +10,9 @@ public class TestBase {
 	public static WebDriver setUp() {
 
 		if (driver == null) {
-
+			System.out.println();
 			// declaration and instantiation of objects/variables
-			System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 			driver = new ChromeDriver();
 			String baseUrl = "http://automationpractice.com/index.php";
 			driver.get(baseUrl);

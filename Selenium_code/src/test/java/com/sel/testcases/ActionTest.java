@@ -26,7 +26,13 @@ public class ActionTest {
 		Action seriesofact1=act1.moveToElement(search).click().keyDown(search,Keys.SHIFT).
 				sendKeys("dress").keyUp(search,Keys.SHIFT).clickAndHold().release().build();
 		seriesofact1.perform();
+		
+		//String baseUrl1 = "http://www.seleniumframework.com/Practiceform/";
+		//driver.get(baseUrl1);
+		
 	}
+	
+
 
 }
 

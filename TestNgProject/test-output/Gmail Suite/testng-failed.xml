@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Gmail Suite]" parallel="tests">
+  <test name="flipkart1(failed)" parallel="tests">
+    <groups>
+      <run>
+        <include name="b"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testngpackage.FLipkart">
+        <methods>
+          <include name="f"/>
+          <include name="launchbrowser"/>
+        </methods>
+      </class> <!-- testngpackage.FLipkart -->
+    </classes>
+  </test> <!-- flipkart1(failed) -->
+</suite> <!-- Failed suite [Gmail Suite] -->

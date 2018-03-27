@@ -35,6 +35,7 @@ public class JavascriptExecutorTest {
 		       System.out.println(text);
 	        //refresh browser
 	        js.executeScript("history.go(0)");
+	        driver.navigate().back();
 	        //get inner text of webpage
 	     
 	       String domainname=js.executeScript("return document.domain").toString();
@@ -43,7 +44,7 @@ public class JavascriptExecutorTest {
 	        System.out.println(windowloc);
 	        String windowheight=js.executeScript("return window.innerHeight").toString();
 	        System.out.println(windowheight);
-	        js.executeScript("window.location = 'http://facebook.com/'");
+	    //    js.executeScript("window.location = 'http://facebook.com/'");
 	     
 	        
 	    		

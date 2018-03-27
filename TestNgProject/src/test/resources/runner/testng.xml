@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+	<test name="testParameter">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.flipkart.com/" />
+		<parameter name="emailid" value="chinki@gmail.com" />
+		<parameter name="pass" value="chinki" />
+
+		<classes>
+			<class name="com.parameterspackage.ParameterTest">
+			</class>
+		</classes>
+	</test>
+</suite>
+
+<!-- Groups parallel execution and other annotations practice -->
+
+<!-- <suite thread-count="1" verbose="1" name="Gmail Suite" annotations="JDK" 
+	parallel="tests"> <test name="flipkart1"> <groups> <run> <include name="b" 
+	/> </run> </groups> <classes> <class name="testngpackage.Facebook"></class> 
+	<class name="testngpackage.FLipkart"> </class> </classes> <classes> <class 
+	name="testngpackage.FLipkart"> <methods> <include name="f" /> <include name="e" 
+	/> </methods> </class> <class name="testngpackage.Facebook"> <methods> <include 
+	name="g" /> </methods> </class> </classes> </test> <test name="flipkart2"> 
+	<classes> <class name="testngpackage.Facebook"> <methods> <include name="g" 
+	/> </methods> </class> </classes> </test> </suite> -->
+	
+	

@@ -41,6 +41,6 @@ public class SelectTest {
 		sel.selectByVisibleText("Price: Highest first");
 
 		// below line throws erroe You may only deselect options of a multi-select
-		sel.deselectByVisibleText("Price: Highest first");
+		//sel.deselectByVisibleText("Price: Highest first");
 	}
 }

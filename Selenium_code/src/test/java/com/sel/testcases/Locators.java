@@ -3,6 +3,7 @@ package com.sel.testcases;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -14,8 +15,8 @@ public class Locators {
 		WebDriver driver = TestBase.setUp();
 
 		// finding element through locator xpath
-		WebElement search = driver.findElement(By.xpath("//input[@id='search_query_top']"));
-		search.sendKeys("dress");
+		//WebElement search = driver.findElement(By.xpath("//input[@id='search_query_top']"));
+		//search.sendKeys("dress");
 		// finding element through locator css
 		WebElement login = driver.findElement(By.cssSelector(".login"));
 		login.click();
@@ -34,7 +35,7 @@ public class Locators {
 		// WebElement lname = driver.findElement(By.name("customer_lastname"));
 		// lname.sendKeys("agrawal");
 		
-		// finding element through lintext
+		// finding element through link text
 		// WebElement link = driver.findElement(By.linkText("Women"));
 		// link.click();
 		
@@ -45,7 +46,7 @@ public class Locators {
 		 */
 
 		// locating hidden elements
-		List<WebElement> dress = driver.findElements(By.cssSelector("a[title='Dresses']"));
+		/*List<WebElement> dress = driver.findElements(By.cssSelector("a[title='Dresses']"));
 		int count = dress.size();
 		System.out.println(+count);
 		for (int i = 0; i < count; i++) {
@@ -54,7 +55,11 @@ public class Locators {
 				dress.get(i).click();
 			}
 
-		}
+		}*/
+		// locating hidden elements
+		JavascriptExecutor js = (JavascriptExecutor)driver;	
+		 WebElement submit1=driver.findElement(By.cssSelector("a[title='Dresses']"));
+	        js.executeScript("arguments[0].click();", submit1);
 
 	}
 }
