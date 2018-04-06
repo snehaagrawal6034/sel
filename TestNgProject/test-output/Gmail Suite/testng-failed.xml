@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Gmail Suite]" parallel="tests">
-  <test name="flipkart1(failed)" parallel="tests">
-    <groups>
-      <run>
-        <include name="b"/>
-      </run>
-    </groups>
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Gmail Suite]" parallel="methods">
+  <test name="test1(failed)" parallel="methods">
     <classes>
-      <class name="testngpackage.FLipkart">
+      <class name="testngpackage.AutomationPractice1">
         <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="e"/>
           <include name="f"/>
+          <include name="afterSuite"/>
+          <include name="terminateBrowser"/>
           <include name="launchbrowser"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testngpackage.FLipkart -->
+      </class> <!-- testngpackage.AutomationPractice1 -->
     </classes>
-  </test> <!-- flipkart1(failed) -->
+  </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [Gmail Suite] -->

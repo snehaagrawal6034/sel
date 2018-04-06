@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Groups parallel execution and other annotations practice -->
+<suite thread-count="2" verbose="1" name="Gmail Suite" annotations="JDK" parallel="tests">
+	<test name="test1">
+		<!-- <groups> <run> <include name="b" /> </run> </groups> -->
+		<classes>
+			<class name="testngpackage.Flipkart"></class>
+		</classes>
+	</test>
+	<test name="test3">
+		<classes>
+			<class name="testngpackage.AutomationPractice1"/>
+		</classes>
+	</test>
+	<test name="test2">
+		<classes>
+			<class name="testngpackage.Automationpractice"/>
+		</classes>
+	</test>
+	
+	<test name="test4">
+		<classes>
+			<class name="testngpackage.DemoSuite"/>
+		</classes>
+	</test>
+</suite>

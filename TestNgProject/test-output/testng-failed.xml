@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
-  <test name="testParameter(failed)">
-    <parameter name="pass" value="chinki"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="emailid" value="abc@gmail.com"/>
-    <parameter name="url" value="https://www.flipkart.com/"/>
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Gmail Suite]" parallel="methods">
+  <test name="test1(failed)" parallel="methods">
     <classes>
-      <class name="com.parameterspackage.ParameterTest">
+      <class name="testngpackage.AutomationPractice1">
         <methods>
-          <include name="flipkartLoginTest" invocation-numbers="0"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="e"/>
+          <include name="f"/>
+          <include name="afterSuite"/>
+          <include name="terminateBrowser"/>
+          <include name="launchbrowser"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.parameterspackage.ParameterTest -->
+      </class> <!-- testngpackage.AutomationPractice1 -->
     </classes>
-  </test> <!-- testParameter(failed) -->
-</suite> <!-- Failed suite [TestSuite] -->
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Gmail Suite] -->

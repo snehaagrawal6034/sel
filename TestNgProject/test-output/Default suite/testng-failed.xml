@@ -3,13 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testngpackage.fk">
+      <class name="testngpackage.AutomationPractice1">
         <methods>
-          <include name="login"/>
-          <include name="init"/>
-          <include name="quit"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="e"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="terminateBrowser"/>
+          <include name="launchbrowser"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
         </methods>
-      </class> <!-- testngpackage.fk -->
+      </class> <!-- testngpackage.AutomationPractice1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
