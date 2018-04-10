@@ -10,10 +10,9 @@
 			<class name="testngpackage.AutomationPractice1"/>
 			<class name="testngpackage.Automationpractice"/>-->
 			
-			<class name="testngpackage.Flipkart">
-			</class> 
+			<class name="testngpackage.Flipkart"/>			 
 			<class name="testngpackage.AutomationPractice1"/>
-			<class name="testngpackage.Automationpractice"/>
+			<!-- <class name="testngpackage.Automationpractice"/> -->
 			
 		</classes>
 	</test>

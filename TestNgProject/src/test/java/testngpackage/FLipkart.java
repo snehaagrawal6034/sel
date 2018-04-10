@@ -28,7 +28,7 @@ public class Flipkart {
 		driver.navigate().to("https://www.flipkart.com");
 	}
 
-	@Test
+	@Test(groups= {"b"})
 	public void login() {
 
 		WebElement element = driver.findElement(By.partialLinkText("Login"));

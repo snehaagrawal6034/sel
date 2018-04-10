@@ -21,14 +21,14 @@ public class AutomationPractice1 {
 	public String baseUrl = "http://automationpractice.com/index.php";
 	WebDriver driver;
 
-	@BeforeMethod(alwaysRun=true)
+@BeforeMethod
 	// @Test(priority=1,groups= { "a","b" })
 	// @Test(groups= { "a","b" })
 	public void launchbrowser() {
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get(baseUrl);
 		driver.manage().window().maximize();
+		driver.get(baseUrl);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
@@ -37,27 +37,38 @@ public class AutomationPractice1 {
 	// @Test(expectedExceptions=ArithmeticException.class,groups= { "a","b"
 	// },dependsOnMethods="launchbrowser")
 
-	//@Test(priority = 0)
+	@Test(priority = 0)
 	// (groups= { "a","b" },dependsOnMethods="launchbrowser")
-	@Test
+	
 	public void f() {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		WebElement login = driver.findElement(By.cssSelector(".login"));
 		login.click();
-
 		WebElement email = driver.findElement(By.cssSelector("input#email_create"));
 		email.sendKeys("sneha.agrawal6034@gmail.com");
 
 		WebElement submit = driver.findElement(By.cssSelector("button[id='SubmitCreate']"));
 		submit.click();
-		System.out.println("I m in method f");
+		System.out.println("AutomationPractice1: I m in method f");
 
 	}
 
-	//@Test(priority = 1)
+	
 	// (dependsOnMethods="launchbrowser",groups= { "a","b" })
 	@Test
 	public void e() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseUrl);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		WebElement login = driver.findElement(By.cssSelector(".login"));
@@ -87,44 +98,44 @@ public class AutomationPractice1 {
 		String windowheight = js.executeScript("return window.innerHeight").toString();
 		System.out.println(windowheight);
 		// js.executeScript("window.location = 'http://facebook.com/'");
-		System.out.println("I m in method e");
+		System.out.println("AutomationPractice1: I m in method e");
 
 	}
 
 	@BeforeTest(alwaysRun=true)
 	public void beforeMethod() {
 
-		System.out.println("before test");
+		System.out.println("AutomationPractice1: before test");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		System.out.println("after method");
+		System.out.println("AutomationPractice1: after method");
 		driver.quit();
 	}
 
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void beforeClass() {
 		System.out.println("before class");
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void afterClass() {
 		System.out.println("after class");
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun=true)
 	public void terminateBrowser() {
 
 	}
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun=true)
 	public void beforeSuite() {
 		System.out.println("before suite");
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun=true)
 	public void afterSuite() {
 
 		System.out.println("after suite");

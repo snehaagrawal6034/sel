@@ -11,7 +11,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.11</version>
-		</dependency> 
+		</dependency>
 
 
 
@@ -121,31 +121,26 @@
 				<configuration>
 					<testFailureIgnore> false </testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/runner/testng_test.xml</suiteXmlFile>
 
 					</suiteXmlFiles>
 				</configuration>
-
-
-
-
-
 			</plugin>
 
 
 		</plugins>
 
-		
+
 		<testResources>
-      <testResource>
-        <directory>src/test/resources/properties</directory>
-        <includes>
-          <include>log4j.properties</include>
-        </includes>
-      </testResource>
-    </testResources>
-		
-		
+			<testResource>
+				<directory>src/test/resources/properties</directory>
+				<includes>
+					<include>log4j.properties</include>
+				</includes>
+			</testResource>
+		</testResources>
+
+
 	</build>
 
 

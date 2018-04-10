@@ -17,11 +17,42 @@
 <!-- Groups parallel execution and other annotations practice -->
 
 <!-- <suite thread-count="1" verbose="1" name="Gmail Suite" annotations="JDK" 
-	parallel="tests"> <test name="flipkart1"> <groups> <run> <include name="b" 
-	/> </run> </groups> <classes> <class name="testngpackage.Facebook"></class> 
+	parallel="tests"> <test name="flipkart1"> 
+	<groups> 
+	<run> 
+	<include name="b" /> 
+	</run> 
+	</groups> 
+	<classes> <class name="testngpackage.Facebook"></class> 
 	<class name="testngpackage.FLipkart"> </class> </classes> <classes> <class 
 	name="testngpackage.FLipkart"> <methods> <include name="f" /> <include name="e" 
 	/> </methods> </class> <class name="testngpackage.Facebook"> <methods> <include 
 	name="g" /> </methods> </class> </classes> </test> <test name="flipkart2"> 
 	<classes> <class name="testngpackage.Facebook"> <methods> <include name="g" 
 	/> </methods> </class> </classes> </test> </suite> -->
+	
+	
+	<!--     groups of groups    -->
+	
+	<!-- <test name="Regression1">
+  <groups>
+    <define name="functest">
+      <include name="windows"/>
+      <include name="linux"/>
+    </define>
+  
+    <define name="all">
+      <include name="functest"/>
+      <include name="checkintest"/>
+    </define>
+  
+    <run>
+      <include name="all"/>
+    </run>
+  </groups>
+  
+  <classes>
+    <class name="test.sample.Test1"/>
+  </classes>
+</test> -->
+	

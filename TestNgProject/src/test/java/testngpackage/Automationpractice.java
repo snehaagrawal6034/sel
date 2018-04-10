@@ -23,8 +23,7 @@ public class Automationpractice {
 	public String baseUrl = "http://automationpractice.com/index.php";
 	WebDriver driver;
 	
-	@Test
-	//@Test(groups= {"b"},dependsOnMethods="launchbrowser")
+	@Test(groups= {"b"})
 	public void g() {
 		List<WebElement> dress = driver.findElements(By.cssSelector("a[title='Dresses']"));
 		int count = dress.size();
@@ -53,7 +52,7 @@ public class Automationpractice {
 
 		// below line throws erroe You may only deselect options of a multi-select
 		// sel.deselectByVisibleText("Price: Highest first");
-		System.out.println("I m in method g");
+		System.out.println("Automationpractice: I m in method g");
 
 	}
 
@@ -70,7 +69,7 @@ public class Automationpractice {
 
 	@AfterMethod
 	public void tearDown() {
-		System.out.println("after method AP");
+		System.out.println("Automationpractice: after method AP");
 		driver.quit();
 	}
 

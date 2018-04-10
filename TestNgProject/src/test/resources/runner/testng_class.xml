@@ -8,14 +8,14 @@
 		<classes>
 
 			<class name="testngpackage.Automationpractice" />
-			<class name="testngpackage.AutomationPractice1" />
-			<class name="testngpackage.Flipkart"></class>
+
 
 		</classes>
 	</test>
 	<test name="test4">
 		<classes>
-
+			<class name="testngpackage.AutomationPractice1" />
+			<class name="testngpackage.Flipkart"></class>
 			<class name="testngpackage.DemoSuite" />
 		</classes>
 	</test>

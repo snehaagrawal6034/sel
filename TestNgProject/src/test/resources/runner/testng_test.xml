@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<!-- Groups parallel execution and other annotations practice -->
+
 <suite thread-count="2" verbose="1" name="Gmail Suite" annotations="JDK" parallel="tests">
+ <!--  <groups>
+    <run>
+      <include name="a"/>
+            <include name="b"/>
+    </run>
+  </groups> -->
+
 	<test name="test1">
 		<!-- <groups> <run> <include name="b" /> </run> </groups> -->
 		<classes>
@@ -19,9 +26,9 @@
 		</classes>
 	</test>
 	
-	<test name="test4">
+	<!-- <test name="test4">
 		<classes>
 			<class name="testngpackage.DemoSuite"/>
 		</classes>
-	</test>
+	</test> -->
 </suite>
